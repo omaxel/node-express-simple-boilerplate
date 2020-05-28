@@ -1,14 +1,17 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const cors = require('cors');
 
-app.listen(3000, function () {
+const app = express();
+app.use(cors());
+
+app.listen(3000, () => {
   console.log('Example app listening on port 3000!');
 });
 
-app.get('/hello', function (req, res) {
-  res.send('Hello World from Service 2!');
+app.get('/hello', (req, res) => {
+  res.send('Hello World!');
 });
 
-app.get('/hello-json', function (req, res) {
+app.get('/hello-json', (req, res) => {
   res.send({ hello: 'world' });
 });
