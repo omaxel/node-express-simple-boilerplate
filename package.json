@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "Simple Node.js + Express boilerplate project.",
   "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "author": "Omar Muscatello",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
